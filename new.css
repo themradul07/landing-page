@@ -990,7 +990,7 @@ a.locality-card-link {
     }
 
     .movie-image-box {
-        height: 220px;
+        height: 100%
     }
 }
 
@@ -1008,11 +1008,11 @@ a.locality-card-link {
     }
 
     .movie-image-box {
-        height: 160px;
+        height: 100%
     }
 
     .movie-details {
-        padding: 10px;
+       display: none;
     }
 
     .movie-title {
@@ -1052,7 +1052,7 @@ a.locality-card-link {
     }
 
     .movie-image-box {
-        height: 100px;
+        height: 100%;
     }
 }
 
@@ -1425,7 +1425,7 @@ a.locality-card-link {
     }
 
     .uv-header {
-        padding: 10px;
+        padding: 15px;
         height: fit-content;
         justify-content: center;
     }
