@@ -1413,8 +1413,8 @@ a.locality-card-link {
     }
 
     .uv-header {
-        padding: 0px;
-        height: 120px;
+        padding: 10px;
+        height: fit-content;
         justify-content: center;
     }
 
@@ -1434,11 +1434,13 @@ a.locality-card-link {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
     }
 
     .uv-left-section {
-        flex-direction: column;
+       
+        width: 90%;
+        
     }
 
     .uv-slider img {
@@ -1451,6 +1453,7 @@ a.locality-card-link {
 
     .uv-search-bar {
         flex-direction: column;
+        display: none;
     }
 
     .uv-search-btn {
@@ -1476,4 +1479,61 @@ a.locality-card-link {
     .uv-header {
         gap: 10px;
     }
+}
+
+/* pop-up */
+.uv-popup-overlay {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 350px;
+  height: 250px; 
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.uv-popup-content {
+  background:#8e44ad;
+  padding: 30px;
+  border-radius: 5px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: popupFade 0.8s ease-in-out;
+  color: white;
+}
+
+.uv-popup-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

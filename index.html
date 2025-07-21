@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buisness</title>
+    <title>Business</title>
     <link rel="stylesheet" href="new.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
@@ -15,10 +15,12 @@
     <header class="uv-header">
         <div class="uv-left-section">
             <div class="uv-logo">
-                <div>Find<span>Sphere</span></div>
+                <div>Busi<span>Ness</span></div>
                 <div class="uv-user-info">
                     <div href="#"><img src="./assets/bell.png" /></div>
                     <div><i class="fa-solid fa-user"></i></div>
+                    <button class="uv-search-btn"><img src="/assets/search-interface-symbol.png"
+                                alt="search"></button>
                 </div>
             </div>
 
@@ -57,6 +59,16 @@
             <button class="uv-login-btn">Login / Sign Up</button>
         </div>
     </header>
+
+    <!-- pop up -->
+    <div class="uv-popup-overlay" id="uvPopup">
+        <div class="uv-popup-content">
+            <button class="uv-popup-close" id="uvPopupClose">&times;</button>
+            <h2>Welcome to BusiNess!</h2>
+            <p>Explore services around you — Restaurants, Hotels, Doctors, and more.</p>
+        </div>
+    </div>
+
 
     <section class="uv-search-banner">
         <h2>Search across ‘ 5.9 Crore+’ <span class="uv-highlight">Products & Services</span></h2>
@@ -1274,7 +1286,7 @@
 
 
 
-        
+
         <script src="app.js"></script>
     </div>
 
