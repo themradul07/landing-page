@@ -1438,9 +1438,9 @@ a.locality-card-link {
     }
 
     .uv-left-section {
-       
+
         width: 90%;
-        
+
     }
 
     .uv-slider img {
@@ -1465,6 +1465,9 @@ a.locality-card-link {
     .uv-category-cards {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
+    .free-listing{
+        display: none;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -1483,57 +1486,90 @@ a.locality-card-link {
 
 /* pop-up */
 .uv-popup-overlay {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  width: 350px;
-  height: 250px; 
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
 }
 
 .uv-popup-content {
-  background:#8e44ad;
-  padding: 30px;
-  border-radius: 5px;
-  font-size: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 500px;
-  height: 100%;
+    background: #8e44ad;
+    padding: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
 
-  text-align: center;
-  position: relative;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  animation: popupFade 0.8s ease-in-out;
-  color: white;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: popupFade 0.8s ease-in-out;
+    color: white;
 }
 
 .uv-popup-close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  background: transparent;
-  border: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
 }
 
 @keyframes popupFade {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.free-listing {
+    position: fixed;
+    z-index: 10;
+    right: -85px; /* Adjusted for rotated width (~button height) */
+    top: 45%;
+    transform: rotateZ(90deg);
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+.free1,
+.free2 {
+    background-color: #8e44ad; /* default for free1 */
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0; /* important */
+    white-space: nowrap;
+}
+
+.free2 {
+    background-color: black;
+}
+
+@media (max-width: 600px) {
+    
+    .free-listing{
+        display: none;
+    }
 }
