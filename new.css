@@ -771,7 +771,9 @@ a.locality-card-link {
     .trending-head {
         font-size: 18px;
     }
-
+    .trending-search{
+        padding: 10px 15px;
+    }
     .top-search-card {
         width: 250px;
     }
@@ -1572,4 +1574,5 @@ a.locality-card-link {
     .free-listing{
         display: none;
     }
+    
 }
