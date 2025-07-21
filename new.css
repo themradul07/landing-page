@@ -771,9 +771,11 @@ a.locality-card-link {
     .trending-head {
         font-size: 18px;
     }
-    .trending-search{
+
+    .trending-search {
         padding: 10px 15px;
     }
+
     .top-search-card {
         width: 250px;
     }
@@ -887,13 +889,11 @@ a.locality-card-link {
     }
 
     .recent-card {
-        flex: 0 0 48%;
-        /* two cards per row on mobile */
-        width: unset;
-        min-width: unset;
+        flex: 0 0 48%;        
+        width: 50px;
+        max-width: 48%;
         height: auto;
-        padding-bottom: 10px;
-        /* border-radius: 8px; */
+        padding-bottom: 10px;       
     }
 
     .recent-img-ctn {
@@ -907,7 +907,17 @@ a.locality-card-link {
     .recent-card-head {
         flex-direction: column;
         align-items: flex-start;
-        padding: 5% 3%;
+        padding: 5% 5%;
+    }
+    .recent-card-head-heading {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .recent-card-head-detail{
+        font-size: 10px;
+    }
+    .whatsapp-btn{
+        display: none;
     }
 
     .recent-card-head-ctn {
@@ -915,7 +925,7 @@ a.locality-card-link {
     }
 
     .recent-activity-reviewer {
-        flex-direction: column;
+       font-size: 12px;
         align-items: flex-start;
         gap: 4px;
     }
@@ -928,19 +938,19 @@ a.locality-card-link {
     }
 
     .recent-activity-username {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .recent-activity-useraction {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .recent-activity-stars {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .recent-activity-review {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .load-more-btn {
@@ -1365,7 +1375,7 @@ a.locality-card-link {
     gap: 30px;
     width: 100%;
     max-width: 1440px;
-    margin: 40px auto;
+   
     padding: 20px;
     background-color: #fff;
 }
@@ -1406,7 +1416,7 @@ a.locality-card-link {
 @media (max-width: 768px) {
     .uv-main-content {
         flex-direction: column;
-        gap: 40px;
+        gap: 10px;
         padding: 0px;
     }
 
@@ -1428,9 +1438,7 @@ a.locality-card-link {
         justify-content: space-between;
     }
 
-    .uv-search-banner {
-        margin-top: 120px;
-    }
+
 
     .uv-user-info {
         display: flex;
@@ -1450,7 +1458,15 @@ a.locality-card-link {
     }
 
     .uv-quick-links {
-        justify-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        
+    }
+    .uv-link-box{
+        width: 48%;
+        height: 200px;
+        margin-bottom: 10px;
     }
 
     .uv-search-bar {
@@ -1465,9 +1481,10 @@ a.locality-card-link {
 
 @media (max-width: 600px) {
     .uv-category-cards {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(51px, 1fr));
     }
-    .free-listing{
+
+    .free-listing {
         display: none;
     }
 }
@@ -1543,10 +1560,12 @@ a.locality-card-link {
         transform: scale(1);
     }
 }
+
 .free-listing {
     position: fixed;
     z-index: 10;
-    right: -85px; /* Adjusted for rotated width (~button height) */
+    right: -85px;
+    /* Adjusted for rotated width (~button height) */
     top: 45%;
     transform: rotateZ(90deg);
     display: flex;
@@ -1554,14 +1573,17 @@ a.locality-card-link {
     margin: 0;
     padding: 0;
 }
+
 .free1,
 .free2 {
-    background-color: #8e44ad; /* default for free1 */
+    background-color: #8e44ad;
+    /* default for free1 */
     color: white;
     font-size: 14px;
     padding: 10px;
     border-radius: 5px;
-    margin: 0; /* important */
+    margin: 0;
+    /* important */
     white-space: nowrap;
 }
 
@@ -1570,9 +1592,56 @@ a.locality-card-link {
 }
 
 @media (max-width: 600px) {
-    
-    .free-listing{
+
+    .free-listing {
         display: none;
     }
-    
+
+    /* pop-up */
+    .uv-popup-overlay {
+
+        width: 250px;
+        height: 150px;
+        padding: 5px;
+
+    }
+
+    .uv-popup-content {
+
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+
+    }
+
+    .uv-popup-close {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        background: transparent;
+        border: none;
+        font-size: 22px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .uv-search-banner h2 {
+        font-size: 22px;
+    }
+
+    .uv-search-banner {
+        margin-top: 60px;
+        padding: 24px;
+        font-size: 20px;
+    }
+
+
 }

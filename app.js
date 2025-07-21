@@ -196,16 +196,16 @@ counters.forEach((counter) => {
   observer.observe(counter);
 });
 window.addEventListener("load", function () {
-  setTimeout(function () {
+ 
     const popup = document.getElementById("uvPopup");
     const closeBtn = document.getElementById("uvPopupClose");
 
     popup.style.display = "flex"; // Show after delay
 
-    closeBtn.addEventListener("click", () => {
-      popup.style.display = "none"; // Hide on close
-    });
-  }, 5000); // Delay in milliseconds (1000 ms = 1 second)
+  
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none"; // Hide on close
+  });
 });
 
 
